@@ -1,7 +1,13 @@
+#generate-button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .buttons-container{
     text-align: center;
-    min-height: 100vh;
-    min-width: 100vw;
+    /* min-height: 100vh; */
+    /* min-width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: space-around;

@@ -32,7 +32,7 @@ function GenerateButtonForm() {
 
     return (
 
-        <div>
+        <div id="generate-button-container">
             <form onSubmit={(e) => onSubmit(e)}>
                 <label for="variant">Variant:</label>
                 <select name="variant" id="variant">
@@ -74,7 +74,7 @@ function GenerateButtonForm() {
                 <input type="submit" value='submit'></input>
 
             </form>
-            <button onMouseDown={() => setNewButton({})}>test</button>
+            <button onMouseDown={() => setNewButton({})}>Clear</button>
             <div id="new-button-display">
                 {Object.keys(newButton).length !== 0 ? <Button {...newButton} /> : ''}
             </div>
