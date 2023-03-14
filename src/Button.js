@@ -1,32 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import './Button.css'
+import local_grocery_store from './img/local_grocery_store.png'
 const Button = (props) => {
-    console.log(props)//this is an object
-    if (props.length ==0){
-        let className='default'
+
+    const classnamesArr = []
+    for (const property in props) {
+        switch (property) {
+            case 'variant':
+                classnamesArr.push(props.variant)
+                break;
+            case 'disableShadow':
+                classnamesArr.push('disableShadow')
+                break;
+            case 'disabled':
+                classnamesArr.push('disabled')
+                break;
+            case 'startIcon':
+                classnamesArr.push(props.startIcon)
+                break;
+            case 'endIcon':
+                classnamesArr.push(props.endIcon)///////should use the end and start to know where to put
+                break;
+            case 'size':
+                classnamesArr.push(props.size)
+                break;
+            case 'color':
+                classnamesArr.push(props.color)
+                break;
+            default:
+                break;
+        }
+
     }
 
-    //////////////
-    //<Button /> - default 
-    // <Button variant="outline" />
-    // <Button variant="text" />
-    // <Button disableShadow" />
-    // <Button disabled />
     // <Button startIcon="local_grocery_store" />
     // <Button endIcon="local_grocery_store" />
-    // <Button size="sm" />
-    // // <Button size="md" />
-    // <Button size="lg" />
-    // <Button color="default" />
-    // <Button color="primary" />
-    // <Button color="secondary" />
-    // <Button color="danger" />
-
-    //&&:hover , &:focus
-    ////////////////
     return (
         <div>
-            <button className={`${props.varient} ${props.color} ${props.size} ${props.startIcon} `}>Default</button>
+            <button className={classnamesArr.join(' ')}>
+                {props.startIcon ? <img src={local_grocery_store} className='icon'></img> : ''}
+                Default
+                {props.endIcon ? <img src={local_grocery_store} className='icon'></img> : ''}
+            </button>
+            <p style={{fontSize:'8px'}}>
+                {classnamesArr.length > 0 ? classnamesArr[0] : 'Default'}
+            </p>
         </div>
     )
 

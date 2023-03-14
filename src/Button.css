@@ -1,15 +1,15 @@
 button {
     border: none;
+    justify-content: center;
     height: 30px;
     border-radius: 5px;
     padding: 14px;
     display: flex;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 10px;
-    /* box-shadow: -1px 1px 2px #a491919c; */
+    margin: 10px;
+    box-shadow: 0px 1px 2px #a491919c;
     background-color: rgba(219, 218, 218, 0.901);
-    /* filter: blur(0.5px); */
+    filter: blur(0.2px);
+    align-items: center;
 }
 
 
@@ -23,16 +23,126 @@ button:hover,
     color: blue;
     background-color: white;
 }
-.text{
+
+.text {
     border: none;
     background-color: white;
     color: blue;
+    box-shadow: none;
 }
+
 .outline:hover,
 :focus {
-    background-color: rgba(145, 160, 240, 0.192);
+    background-color: rgba(145, 159, 240, 0.356);
 }
+
 .text:hover,
 :focus {
-    background-color: rgba(145, 160, 240, 0.192);
+    background-color: rgba(145, 159, 240, 0.356);
+}
+
+.disableShadow {
+    background-color: rgba(0, 0, 255, 0.692);
+    color: white;
+    box-shadow: none;
+}
+
+.disableShadow:hover,
+:focus {
+    visibility: hidden;
+}
+
+.disabled {
+    cursor: not-allowed;
+    color: grey;
+    box-shadow: none;
+}
+
+.disabled:hover,
+:focus {
+    /* border: black solid 5px; */
+    background-color: white;
+    /* box-shadow: none; */
+
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.sm {
+    background-color: rgba(0, 0, 255, 0.624);
+    color: white;
+    width: 60px;
+    height: 20px;
+}
+
+.md {
+    background-color: rgba(0, 0, 255, 0.624);
+    color: white;
+    width: 70px;
+    height: 25px;
+}
+
+.lg {
+    background-color: rgba(0, 0, 255, 0.624);
+    color: white;
+    width: 80px;
+    height: 30px;
+}
+
+.primary {
+    background-color: rgba(0, 0, 255, 0.649);
+    color: white;
+}
+
+.secondary {
+    background-color: rgba(29, 29, 71, 0.727);
+    color: white;
+}
+
+.danger {
+    background-color: rgba(169, 0, 3, 0.781);
+    color: white;
+}
+
+/*  */
+/* .sm:hover,:focus {
+    background-color: rgba(0, 0, 255, 0.624);
+    color: white;
+    width: 60px;
+    height: 20px;
+}
+
+.md:hover,:focus {
+    background-color: rgba(0, 0, 255, 0.624);
+    color: white;
+    width: 70px;
+    height: 25px;
+}
+
+.lg:hover,:focus {
+    background-color: rgba(0, 0, 255, 0.624);
+    color: white;
+    width: 80px;
+    height: 30px;
+} */
+
+.primary:hover,
+:focus {
+    background-color: rgba(19, 19, 161, 0.807);
+    color: white;
+}
+
+.secondary:hover,
+:focus {
+    background-color: rgba(19, 19, 42, 0.845);
+    color: white;
+}
+
+.danger:hover,
+:focus {
+    background-color: rgba(119, 10, 12, 0.881);
+    color: white;
 }
