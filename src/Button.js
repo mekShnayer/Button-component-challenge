@@ -33,8 +33,6 @@ const Button = (props) => {
 
     }
 
-    // <Button startIcon="local_grocery_store" />
-    // <Button endIcon="local_grocery_store" />
     return (
         <div>
             <button className={classnamesArr.join(' ')}>
