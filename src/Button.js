@@ -38,9 +38,9 @@ const Button = (props) => {
     return (
         <div>
             <button className={classnamesArr.join(' ')}>
-                {props.startIcon ? <img src={local_grocery_store} className='icon'></img> : ''}
+                {props.startIcon ? <img src={props.startIcon} className='icon'></img> : ''}
                 Default
-                {props.endIcon ? <img src={local_grocery_store} className='icon'></img> : ''}
+                {props.endIcon ? <img src={props.endIcon} className='icon'></img> : ''}
             </button>
             <p style={{fontSize:'8px'}}>
                 {classnamesArr.length > 0 ? classnamesArr[0] : 'Default'}
